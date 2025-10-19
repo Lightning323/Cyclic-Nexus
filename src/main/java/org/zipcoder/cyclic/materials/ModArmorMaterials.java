@@ -26,7 +26,7 @@ public enum ModArmorMaterials implements ArmorMaterial {
             SoundEvents.ARMOR_EQUIP_GENERIC, // equip sound
             0.3F, // toughness
             0F, // knockback resistance
-            () -> Ingredient.of(Items.COPPER_INGOT)),
+            () -> Ingredient.of(Items.GLOWSTONE_DUST)),
 
     //Copper has iron protection but leather durability
     COPPER_ARMOR("copper", 5, // durability

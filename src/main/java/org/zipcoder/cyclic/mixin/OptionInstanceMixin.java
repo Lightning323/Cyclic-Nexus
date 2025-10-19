@@ -29,7 +29,7 @@ public abstract class OptionInstanceMixin<T> implements I_OptionInstance<T> {
                 this.onValueUpdate.accept(this.value);
             }
         }
-        System.out.println("Set value to " + this.value);
+//        System.out.println("Set value to " + this.value);
     }
 
 }

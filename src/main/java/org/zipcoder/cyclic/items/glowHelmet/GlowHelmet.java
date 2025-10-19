@@ -7,7 +7,7 @@ import org.zipcoder.cyclic.materials.ModArmorMaterials;
 
 public class GlowHelmet extends ArmorItem {
     private static double DEFAULT_GAMMA = 1.0D;
-    private static final double MAX_GAMMA = 8.5;
+    public static final double MAX_GAMMA = 8.5;
 
     public static void setNightVision(boolean enabled) {
         if(enabled){

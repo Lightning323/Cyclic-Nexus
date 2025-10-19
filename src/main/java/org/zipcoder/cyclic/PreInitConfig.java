@@ -33,7 +33,7 @@ public class PreInitConfig {
      * Only boolean, int, double and string are supported
      * NO FLOATS ALLOWED!
      */
-    public boolean client_nightVisionKey = true;
+    public boolean client_nightVisionKey = false;
 
     public int potion_freeze1Duration = 15;
     public int potion_freeze2Duration = 50;
@@ -78,7 +78,7 @@ public class PreInitConfig {
      */
     private void loadConfig(FileConfig config) {
         config.load();
-        client_nightVisionKey = config.getOrElse("client.night_vision_key", true);
+        client_nightVisionKey = config.getOrElse("client.night_vision_key", false);
 
         potion_freeze1Duration = config.getOrElse("common.potion.freeze_1_duration", potion_freeze1Duration);
         potion_freeze2Duration = config.getOrElse("common.potion.freeze_2_duration", potion_freeze2Duration);

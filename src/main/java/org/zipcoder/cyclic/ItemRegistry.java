@@ -26,7 +26,7 @@ public class ItemRegistry {
     public static final RegistryObject<Item> GOLD_SNOWFLAKE = ITEMS.register("gold_snowflake", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> PRISMARINE_GEMSTONE = ITEMS.register("gem_prismarine", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> TANZANITE_GEMSTONE = ITEMS.register("gem_tanzanite", () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> TANZANITE_SHARD = ITEMS.register("tanzanite_shard", () -> new Item(new Item.Properties()));
+//    public static final RegistryObject<Item> TANZANITE_SHARD = ITEMS.register("tanzanite_shard", () -> new Item(new Item.Properties()));
 //    public static final RegistryObject<Item> OBSIDIAN_GEMSTONE = ITEMS.register("gem_obsidian", () -> new Item(new Item.Properties()));
 
 
@@ -56,11 +56,11 @@ public class ItemRegistry {
     public static final RegistryObject<Item> AMETHYST_AXE = ITEMS.register("amethyst_axe", () -> new AxeItem(ModToolMaterials.AMETHYST, 4, -2.9f, new Item.Properties()));
 
     //Tanzanite tools
-    public static final RegistryObject<Item> TANZANITE_SHOVEL = ITEMS.register("tanzanite_shovel", () -> new ShovelItem(ModToolMaterials.TANZANITE, 0, -2.9f, new Item.Properties()));
-    public static final RegistryObject<Item> TANZANITE_HOE = ITEMS.register("tanzanite_hoe", () -> new HoeItem(ModToolMaterials.TANZANITE, -1, -2.9f, new Item.Properties()));
-    public static final RegistryObject<Item> TANZANITE_SWORD = ITEMS.register("tanzanite_sword", () -> new SwordItem(ModToolMaterials.TANZANITE, 3, -2.9f, (new Item.Properties())));
-    public static final RegistryObject<Item> TANZANITE_PICKAXE = ITEMS.register("tanzanite_pickaxe", () -> new PickaxeItem(ModToolMaterials.TANZANITE, 1, -2.9f, new Item.Properties()));
-    public static final RegistryObject<Item> TANZANITE_AXE = ITEMS.register("tanzanite_axe", () -> new AxeItem(ModToolMaterials.TANZANITE, 5, -2.9f, new Item.Properties()));
+//    public static final RegistryObject<Item> TANZANITE_SHOVEL = ITEMS.register("tanzanite_shovel", () -> new ShovelItem(ModToolMaterials.TANZANITE, 0, -2.9f, new Item.Properties()));
+//    public static final RegistryObject<Item> TANZANITE_HOE = ITEMS.register("tanzanite_hoe", () -> new HoeItem(ModToolMaterials.TANZANITE, -1, -2.9f, new Item.Properties()));
+//    public static final RegistryObject<Item> TANZANITE_SWORD = ITEMS.register("tanzanite_sword", () -> new SwordItem(ModToolMaterials.TANZANITE, 3, -2.9f, (new Item.Properties())));
+//    public static final RegistryObject<Item> TANZANITE_PICKAXE = ITEMS.register("tanzanite_pickaxe", () -> new PickaxeItem(ModToolMaterials.TANZANITE, 1, -2.9f, new Item.Properties()));
+//    public static final RegistryObject<Item> TANZANITE_AXE = ITEMS.register("tanzanite_axe", () -> new AxeItem(ModToolMaterials.TANZANITE, 5, -2.9f, new Item.Properties()));
 
 
     public static final RegistryObject<Item> EMERALD_BOOTS = ITEMS.register("emerald_boots", () -> new ArmorItem(ModArmorMaterials.EMERALD_ARMOR, ArmorItem.Type.BOOTS, new Item.Properties()));
@@ -85,16 +85,16 @@ public class ItemRegistry {
     private static final int VANILLA_SHIELD_DURABILITY = 336;
 
     public static final RegistryObject<Item> SHIELD_LEATHER = ITEMS.register("shield_leather", () -> new ShieldCyclicItem(
-            new Item.Properties().durability((int) (VANILLA_SHIELD_DURABILITY * preInit.leatherShieldDurabilityMultiplier)), ShieldCyclicItem.ShieldType.LEATHER));
+            new Item.Properties().durability((int) (VANILLA_SHIELD_DURABILITY * preInit.leatherShieldDurabilityMultiplier)), Items.LEATHER));
 
     public static final RegistryObject<Item> SHIELD_BONE = ITEMS.register("shield_bone", () -> new ShieldCyclicItem(
-            new Item.Properties().durability((int) (VANILLA_SHIELD_DURABILITY * preInit.boneShieldDurabilityMultiplier)), ShieldCyclicItem.ShieldType.BONE));
+            new Item.Properties().durability((int) (VANILLA_SHIELD_DURABILITY * preInit.boneShieldDurabilityMultiplier)), Items.BONE));
 
     public static final RegistryObject<Item> SHIELD_OBSIDIAN = ITEMS.register("shield_obsidian", () -> new ShieldCyclicItem(
-            new Item.Properties().durability((int) (VANILLA_SHIELD_DURABILITY * preInit.obsidianShieldDurabilityMultiplier)), ShieldCyclicItem.ShieldType.OBSIDIAN));
+            new Item.Properties().durability((int) (VANILLA_SHIELD_DURABILITY * preInit.obsidianShieldDurabilityMultiplier)), Items.OBSIDIAN));
 
     public static final RegistryObject<Item> SHIELD_NETHERITE = ITEMS.register("shield_netherite", () -> new ShieldCyclicItem(
-            new Item.Properties().durability((int) (VANILLA_SHIELD_DURABILITY * preInit.netheriteDurabilityMultiplier)), ShieldCyclicItem.ShieldType.OBSIDIAN));
+            new Item.Properties().durability((int) (VANILLA_SHIELD_DURABILITY * preInit.netheriteDurabilityMultiplier)), Items.ANCIENT_DEBRIS));
 
 
     //Creative gear
@@ -110,12 +110,12 @@ public class ItemRegistry {
 
             event.accept(ItemRegistry.COPPER_SWORD);
             event.accept(ItemRegistry.AMETHYST_SWORD);
-            event.accept(ItemRegistry.TANZANITE_SWORD);
+//            event.accept(ItemRegistry.TANZANITE_SWORD);
             event.accept(ItemRegistry.EMERALD_SWORD);
 
             event.accept(ItemRegistry.COPPER_AXE);
             event.accept(ItemRegistry.AMETHYST_AXE);
-            event.accept(ItemRegistry.TANZANITE_AXE);
+//            event.accept(ItemRegistry.TANZANITE_AXE);
             event.accept(ItemRegistry.EMERALD_AXE);
 
 
@@ -146,10 +146,10 @@ public class ItemRegistry {
             event.accept(ItemRegistry.AMETHYST_PICKAXE);
             event.accept(ItemRegistry.AMETHYST_AXE);
 
-            event.accept(ItemRegistry.TANZANITE_SHOVEL);
-            event.accept(ItemRegistry.TANZANITE_HOE);
-            event.accept(ItemRegistry.TANZANITE_PICKAXE);
-            event.accept(ItemRegistry.TANZANITE_AXE);
+//            event.accept(ItemRegistry.TANZANITE_SHOVEL);
+//            event.accept(ItemRegistry.TANZANITE_HOE);
+//            event.accept(ItemRegistry.TANZANITE_PICKAXE);
+//            event.accept(ItemRegistry.TANZANITE_AXE);
 
             event.accept(ItemRegistry.EMERALD_SHOVEL);
             event.accept(ItemRegistry.EMERALD_HOE);
@@ -176,7 +176,7 @@ public class ItemRegistry {
 
             event.accept(ItemRegistry.PRISMARINE_GEMSTONE);
 
-            event.accept(ItemRegistry.TANZANITE_SHARD);
+//            event.accept(ItemRegistry.TANZANITE_SHARD);
             event.accept(ItemRegistry.TANZANITE_GEMSTONE);
 //            event.accept(ItemRegistry.OBSIDIAN_GEMSTONE);
         }

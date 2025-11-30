@@ -20,17 +20,14 @@ import net.minecraftforge.common.ToolActions;
 import java.util.List;
 
 public class ShieldCyclicItem extends ShieldItem implements Equipable {
-    public static enum ShieldType {
-        LEATHER, OBSIDIAN, BONE
-    }
 
+    Item repairItem;
+    int useDuration = 72000;
     public static final ResourceLocation BLOCKING = new ResourceLocation("minecraft:blocking");
 
-    private ShieldType type;
-
-    public ShieldCyclicItem(Item.Properties properties, ShieldType type) {
+    public ShieldCyclicItem(Item.Properties properties, Item repairItem) {
         super(properties);
-        this.type = type;
+        this.repairItem = repairItem;
         DispenserBlock.registerBehavior(this, ArmorItem.DISPENSE_ITEM_BEHAVIOR);
     }
 
@@ -41,17 +38,14 @@ public class ShieldCyclicItem extends ShieldItem implements Equipable {
 
     @Override
     public boolean isValidRepairItem(ItemStack stackShield, ItemStack stackIngredient) {
-        if (type == ShieldType.LEATHER)
-            return stackIngredient.is(Items.LEATHER);
-        if (type == ShieldType.BONE)
-            return stackIngredient.is(Items.BONE);
-        if (type == ShieldType.OBSIDIAN)
-            return stackIngredient.is(Blocks.OBSIDIAN.asItem());
+        if (repairItem != null) {
+            return stackIngredient.is(repairItem);
+        }
         return false;
     }
 
     public int getUseDuration(ItemStack p_43107_) {
-        return 72000;
+        return useDuration;
     }
 
 //    @Override
@@ -61,8 +55,10 @@ public class ShieldCyclicItem extends ShieldItem implements Equipable {
 //        return InteractionResultHolder.consume(itemstack);
 //    }
 //
+
     /**
      * A shield is technically an entity, so we need a custom renderer
+     *
      * @param consumer
      */
     @Override

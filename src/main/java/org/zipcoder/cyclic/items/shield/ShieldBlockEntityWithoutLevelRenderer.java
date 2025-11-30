@@ -52,8 +52,9 @@ public class ShieldBlockEntityWithoutLevelRenderer extends BlockEntityWithoutLev
         //copied from superclass
         ps.pushPose();
         ps.scale(1, -1, -1);
+
         boolean isBanner = (stackIn.getTagElement("BlockEntityTag") != null);
-        Material rendermaterial = isBanner ? ModelBakery.SHIELD_BASE : ModelBakery.NO_PATTERN_SHIELD;
+        Material rendermaterial = MaterialShieldRegistry.getMaterial(stackIn, isBanner);
 
         if (stackIn.is(ItemRegistry.SHIELD_LEATHER.get())) {
             rendermaterial = isBanner ? MaterialShieldRegistry.SHIELD_BASE_LEATHER : MaterialShieldRegistry.SHIELD_BASE_LEATHER_NOPATTERN;
@@ -76,7 +77,7 @@ public class ShieldBlockEntityWithoutLevelRenderer extends BlockEntityWithoutLev
 //            List<Pair<Holder<BannerPattern>, DyeColor>> pattern = BannerBlockEntity.createPatterns(ShieldItem.getColor(stackIn), BannerBlockEntity.getItemPatterns(stackIn));
 //            BannerRenderer.renderPatterns(ps, buffer, combinedLight, combinedOverlay, shieldModel.plate(), rendermaterial, false, pattern, stackIn.hasFoil());
 //        } else
-            shieldModel.plate().render(ps, vertex, combinedLight, combinedOverlay, 1.0F, 1.0F, 1.0F, 1.0F);
+        shieldModel.plate().render(ps, vertex, combinedLight, combinedOverlay, 1.0F, 1.0F, 1.0F, 1.0F);
 
         ps.popPose();
     }

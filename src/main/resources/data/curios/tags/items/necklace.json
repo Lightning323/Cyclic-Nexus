@@ -1,9 +1,0 @@
-{
-  "replace": "false",
-  "values": [
-     {"id":   "cyclic:charm_ultimate",                                        "required":false}, 
-     {"id":   "cyclic:charm_venom","required":false}, 
-     {"id":   "cyclic:charm_antipotion","required":false}, 
-     {"id":   "cyclic:charm_boostpotion","required":false}
-  ]
-}

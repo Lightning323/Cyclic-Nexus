@@ -34,22 +34,22 @@ public class ModToolMaterials {
             List.of(Tiers.IRON)); //before
 
 
-    public static final Tier AMETHYST = TierSortingRegistry.registerTier(
-            //harvestLevel, uses, toolSpeed, damage, enchantability
-            //Tiers.IRON
-            new ForgeTier(
-                    2,
-                    300,
-                    Tiers.IRON.getSpeed(),
-                    1.8F,
-                    15,
-                    BlockTags.create(new ResourceLocation(MOD_ID, "needs_amethyst_tool")),
-                    () -> Ingredient.of(Items.AMETHYST_SHARD)),
-            new ResourceLocation(MOD_ID, "amethyst"),
-            List.of(Tiers.IRON), //after
-            List.of(Tiers.DIAMOND)); //before
+//    public static final Tier AMETHYST = TierSortingRegistry.registerTier(
+//            //harvestLevel, uses, toolSpeed, damage, enchantability
+//            //Tiers.IRON
+//            new ForgeTier(
+//                    2,
+//                    300,
+//                    Tiers.IRON.getSpeed(),
+//                    1.8F,
+//                    15,
+//                    BlockTags.create(new ResourceLocation(MOD_ID, "needs_amethyst_tool")),
+//                    () -> Ingredient.of(Items.AMETHYST_SHARD)),
+//            new ResourceLocation(MOD_ID, "amethyst"),
+//            List.of(Tiers.IRON), //after
+//            List.of(Tiers.DIAMOND)); //before
 
-    public static final Tier TANZANITE = TierSortingRegistry.registerTier(
+    public static final Tier AMETHYST = TierSortingRegistry.registerTier(
             //harvestLevel, uses, toolSpeed, damage, enchantability
             //Tiers.IRON
             new ForgeTier(
@@ -58,10 +58,11 @@ public class ModToolMaterials {
                     Tiers.IRON.getSpeed(),
                     2.0F,
                     26,
-                    BlockTags.create(new ResourceLocation(MOD_ID, "needs_tanzanite_tool")),
-                    () -> Ingredient.of(ItemRegistry.TANZANITE_SHARD.get())),
-            new ResourceLocation(MOD_ID, "tanzanite"),
-            List.of(Tiers.IRON), List.of(Tiers.DIAMOND));
+                    BlockTags.create(new ResourceLocation(MOD_ID, "needs_amethyst_tool")),
+                    () -> Ingredient.of(Items.AMETHYST_SHARD)),
+            new ResourceLocation(MOD_ID, "amethyst"),
+            List.of(Tiers.IRON),  //after
+            List.of(Tiers.DIAMOND)); //before
 
 
     //Emerald tools have gold speed (fast) and almost diamond durability
@@ -81,17 +82,6 @@ public class ModToolMaterials {
             List.of(Tiers.GOLD), //after
             List.of(Tiers.DIAMOND) //before
     );
-    //then netherite then
-//    //after netherite
-//    public static final Tier GEMOBSIDIAN = TierSortingRegistry.registerTier(
-//            //harvestLevel, uses, toolSpeed, damage, enchantability
-//            new ForgeTier(Tiers.NETHERITE.getLevel(),
-//                    Tiers.DIAMOND.getUses() * 4, Tiers.DIAMOND.getSpeed() * 4, // uses aka durability
-//                    OBS_DMG.get().floatValue(), Tiers.GOLD.getEnchantmentValue() + 1,
-//                    BlockTags.create(new ResourceLocation(MOD_ID, "needs_obsidian_tool")),
-//                    () -> Ingredient.of(ItemRegistry.GEM_OBSIDIAN.get())),
-//            new ResourceLocation(MOD_ID, "gem_obsidian"),
-//            List.of(Tiers.NETHERITE), List.of());
 
     //Creative tier
     public static final Tier CREATIVE = TierSortingRegistry.registerTier(

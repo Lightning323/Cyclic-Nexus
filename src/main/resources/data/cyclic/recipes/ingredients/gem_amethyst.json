@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " S ",
+    "SOS",
+    " S "
+  ],
+  "key": {
+    "S": {
+      "item": "minecraft:amethyst_shard"
+    },
+    "O": {
+      "item": "minecraft:clay"
+    }
+  },
+  "result": {
+    "item": "cyclic:gem_amethyst"
+  }
+}

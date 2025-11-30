@@ -80,7 +80,7 @@ public class PotionsRegistry {
 
         //Reach distance
         if (REACH_POTION != null) {
-            basicBrewing(REACH_POTION.get(), awkwardPotion.copy(), ItemRegistry.TANZANITE_GEMSTONE.get());
+            basicBrewing(REACH_POTION.get(), awkwardPotion.copy(), ItemRegistry.GEM_AMETHYST.get());
         }
 
         //Attack range
@@ -88,7 +88,7 @@ public class PotionsRegistry {
             ItemStack reach_potion = thickPotion;
             if (REACH_POTION != null)
                 reach_potion = PotionUtils.setPotion(new ItemStack(Items.POTION), REACH_POTION.get());
-            basicBrewing(ATTACK_RANGE_POTION.get(), reach_potion.copy(), ItemRegistry.PRISMARINE_GEMSTONE.get());
+            basicBrewing(ATTACK_RANGE_POTION.get(), reach_potion.copy(), ItemRegistry.GEM_PRISMARINE.get());
         }
     }
 

@@ -18,16 +18,14 @@ public class ItemRegistry {
     public static final DeferredRegister<Item> ITEMS
             = DeferredRegister.create(ForgeRegistries.ITEMS, Cyclic.MOD_ID);
 
-//    public static final RegistryObject<Item> GLOW_HELMET = ITEMS.register("glowing_helmet", () -> new GlowHelmet());
-
     //Misc
     public static final RegistryObject<Item> SNOWFLAKE = ITEMS.register("snowflake", () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> BLUE_SNOWFLAKE = ITEMS.register("blue_snowflake", () -> new Item(new Item.Properties()));
+//    public static final RegistryObject<Item> BLUE_SNOWFLAKE = ITEMS.register("blue_snowflake", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> GOLD_SNOWFLAKE = ITEMS.register("gold_snowflake", () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> PRISMARINE_GEMSTONE = ITEMS.register("gem_prismarine", () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> TANZANITE_GEMSTONE = ITEMS.register("gem_tanzanite", () -> new Item(new Item.Properties()));
-//    public static final RegistryObject<Item> TANZANITE_SHARD = ITEMS.register("tanzanite_shard", () -> new Item(new Item.Properties()));
-//    public static final RegistryObject<Item> OBSIDIAN_GEMSTONE = ITEMS.register("gem_obsidian", () -> new Item(new Item.Properties()));
+
+    public static final RegistryObject<Item> GEM_PRISMARINE = ITEMS.register("gem_prismarine", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> GEM_AMETHYST = ITEMS.register("gem_amethyst", () -> new Item(new Item.Properties()));
+//    public static final RegistryObject<Item> GEM_TANZANITE = ITEMS.register("gem_tanzanite", () -> new Item(new Item.Properties()));
 
 
     //Scaffolding
@@ -87,8 +85,8 @@ public class ItemRegistry {
     public static final RegistryObject<Item> SHIELD_LEATHER = ITEMS.register("shield_leather", () -> new ShieldCyclicItem(
             new Item.Properties().durability((int) (VANILLA_SHIELD_DURABILITY * preInit.leatherShieldDurabilityMultiplier)), Items.LEATHER));
 
-    public static final RegistryObject<Item> SHIELD_BONE = ITEMS.register("shield_bone", () -> new ShieldCyclicItem(
-            new Item.Properties().durability((int) (VANILLA_SHIELD_DURABILITY * preInit.boneShieldDurabilityMultiplier)), Items.BONE));
+//    public static final RegistryObject<Item> SHIELD_BONE = ITEMS.register("shield_bone", () -> new ShieldCyclicItem(
+//            new Item.Properties().durability((int) (VANILLA_SHIELD_DURABILITY * preInit.boneShieldDurabilityMultiplier)), Items.BONE));
 
     public static final RegistryObject<Item> SHIELD_OBSIDIAN = ITEMS.register("shield_obsidian", () -> new ShieldCyclicItem(
             new Item.Properties().durability((int) (VANILLA_SHIELD_DURABILITY * preInit.obsidianShieldDurabilityMultiplier)), Items.OBSIDIAN));
@@ -120,7 +118,6 @@ public class ItemRegistry {
 
 
             event.accept(ItemRegistry.SHIELD_LEATHER);
-            event.accept(ItemRegistry.SHIELD_BONE);
             event.accept(ItemRegistry.SHIELD_OBSIDIAN);
             event.accept(ItemRegistry.SHIELD_NETHERITE);
 
@@ -171,14 +168,10 @@ public class ItemRegistry {
 
         } else if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
             event.accept(ItemRegistry.SNOWFLAKE);
-            event.accept(ItemRegistry.BLUE_SNOWFLAKE);
+//            event.accept(ItemRegistry.BLUE_SNOWFLAKE);
             event.accept(ItemRegistry.GOLD_SNOWFLAKE);
-
-            event.accept(ItemRegistry.PRISMARINE_GEMSTONE);
-
-//            event.accept(ItemRegistry.TANZANITE_SHARD);
-            event.accept(ItemRegistry.TANZANITE_GEMSTONE);
-//            event.accept(ItemRegistry.OBSIDIAN_GEMSTONE);
+            event.accept(ItemRegistry.GEM_PRISMARINE);
+            event.accept(ItemRegistry.GEM_AMETHYST);
         }
     }
 }

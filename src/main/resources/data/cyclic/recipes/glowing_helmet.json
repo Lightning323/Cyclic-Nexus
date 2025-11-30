@@ -3,7 +3,7 @@
   "pattern": [
     " i ",
     "iOi",
-    "o o"
+    "O O"
   ],
   "key": {
     "i": {
@@ -11,9 +11,6 @@
     },
     "O": {
       "item": "minecraft:glowstone"
-    },
-    "o": {
-      "item": "minecraft:glowstone_dust"
     }
   },
   "result": {

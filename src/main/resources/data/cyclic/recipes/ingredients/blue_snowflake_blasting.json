@@ -1,9 +1,0 @@
-{
-  "type": "minecraft:blasting",
-  "ingredient": {
-    "item": "cyclic:snowflake"
-  },
-  "result": "cyclic:blue_snowflake",
-  "experience": 0.1,
-  "cookingtime": 50
-}

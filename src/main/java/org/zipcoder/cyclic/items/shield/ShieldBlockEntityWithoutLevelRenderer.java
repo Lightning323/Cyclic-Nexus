@@ -56,15 +56,6 @@ public class ShieldBlockEntityWithoutLevelRenderer extends BlockEntityWithoutLev
         boolean isBanner = (stackIn.getTagElement("BlockEntityTag") != null);
         Material rendermaterial = MaterialShieldRegistry.getMaterial(stackIn, isBanner);
 
-        if (stackIn.is(ItemRegistry.SHIELD_LEATHER.get())) {
-            rendermaterial = isBanner ? MaterialShieldRegistry.SHIELD_BASE_LEATHER : MaterialShieldRegistry.SHIELD_BASE_LEATHER_NOPATTERN;
-        } else if (stackIn.is(ItemRegistry.SHIELD_BONE.get())) {
-            rendermaterial = isBanner ? MaterialShieldRegistry.SHIELD_BASE_BONE : MaterialShieldRegistry.SHIELD_BASE_BONE_NOPATTERN;
-        } else if (stackIn.is(ItemRegistry.SHIELD_OBSIDIAN.get())) {
-            rendermaterial = isBanner ? MaterialShieldRegistry.SHIELD_BASE_OBSIDIAN : MaterialShieldRegistry.SHIELD_BASE_OBSIDIAN_NOPATTERN;
-        } else if (stackIn.is(ItemRegistry.SHIELD_NETHERITE.get())) {
-            rendermaterial = isBanner ? MaterialShieldRegistry.SHIELD_BASE_NETHERITE : MaterialShieldRegistry.SHIELD_BASE_NETHERITE_NOPATTERN;
-        }
         VertexConsumer vertex = rendermaterial.sprite().wrap(ItemRenderer.getFoilBufferDirect(
                 buffer,
                 shieldModel.renderType(rendermaterial.atlasLocation()),

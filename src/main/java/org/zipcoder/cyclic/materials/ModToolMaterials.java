@@ -33,30 +33,16 @@ public class ModToolMaterials {
             List.of(Tiers.STONE), //after
             List.of(Tiers.IRON)); //before
 
-
-//    public static final Tier AMETHYST = TierSortingRegistry.registerTier(
-//            //harvestLevel, uses, toolSpeed, damage, enchantability
-//            //Tiers.IRON
-//            new ForgeTier(
-//                    2,
-//                    300,
-//                    Tiers.IRON.getSpeed(),
-//                    1.8F,
-//                    15,
-//                    BlockTags.create(new ResourceLocation(MOD_ID, "needs_amethyst_tool")),
-//                    () -> Ingredient.of(Items.AMETHYST_SHARD)),
-//            new ResourceLocation(MOD_ID, "amethyst"),
-//            List.of(Tiers.IRON), //after
-//            List.of(Tiers.DIAMOND)); //before
-
     public static final Tier AMETHYST = TierSortingRegistry.registerTier(
             //harvestLevel, uses, toolSpeed, damage, enchantability
             //Tiers.IRON
             new ForgeTier(
                     2,
+                    //iron is 250
                     1000,
+                    //iron is 6
                     Tiers.IRON.getSpeed(),
-                    2.0F,
+                    Tiers.STONE.getAttackDamageBonus(),
                     26,
                     BlockTags.create(new ResourceLocation(MOD_ID, "needs_amethyst_tool")),
                     () -> Ingredient.of(Items.AMETHYST_SHARD)),
@@ -71,7 +57,9 @@ public class ModToolMaterials {
 //            Tiers.GOLD
             new ForgeTier(
                     0,
+                    //uses = 1561
                     (int) (Tiers.DIAMOND.getUses() * 0.75f),
+                    //diamond is 8
                     12.0F,
                     0.0F,
                     15,

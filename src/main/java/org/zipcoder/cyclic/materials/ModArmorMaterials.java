@@ -17,7 +17,7 @@ import net.minecraft.world.item.ArmorMaterials;
 public enum ModArmorMaterials implements ArmorMaterial {
 
     //Glow
-    GLOWING_ARMOR("glowing", 5, // durability
+    GLOWING_ARMOR("glowing", 33, // durability
             new int[]{ArmorMaterials.IRON.getDefenseForType(ArmorItem.Type.HELMET),// helmtet
                     0, 0, 0
             }, 12, // enchantability
@@ -39,7 +39,7 @@ public enum ModArmorMaterials implements ArmorMaterial {
             () -> Ingredient.of(Items.COPPER_INGOT)), // repair material
 
     //Emerald has iron protection but with a diamond durability, netherite toughness and higher enchantment value than any other armor
-    EMERALD_ARMOR("emerald", 33, // durability
+    EMERALD_ARMOR("emerald", 40, // durability
             new int[]{ // protection
                     ArmorMaterials.IRON.getDefenseForType(ArmorItem.Type.HELMET),// helmtet
                     ArmorMaterials.IRON.getDefenseForType(ArmorItem.Type.CHESTPLATE) + 1,// chestplate

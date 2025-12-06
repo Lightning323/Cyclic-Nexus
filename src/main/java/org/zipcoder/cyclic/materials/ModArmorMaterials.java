@@ -27,7 +27,7 @@ public enum ModArmorMaterials implements ArmorMaterial {
             () -> Ingredient.of(Items.GLOWSTONE_DUST)),
 
     //Copper has iron protection but leather durability
-    COPPER_ARMOR("copper", 5, // durability
+    COPPER_ARMOR("copper", 6, // durability (5 = leather; 15= armor)
             new int[]{ArmorMaterials.IRON.getDefenseForType(ArmorItem.Type.HELMET),// helmtet
                     5,// chestplate
                     ArmorMaterials.IRON.getDefenseForType(ArmorItem.Type.LEGGINGS),// leggings
@@ -39,7 +39,7 @@ public enum ModArmorMaterials implements ArmorMaterial {
             () -> Ingredient.of(Items.COPPER_INGOT)), // repair material
 
     //Emerald has iron protection but with a diamond durability, netherite toughness and higher enchantment value than any other armor
-    EMERALD_ARMOR("emerald", 40, // durability
+    EMERALD_ARMOR("emerald", 33, // durability (33= diamond; 37 = netherite)
             new int[]{ // protection
                     ArmorMaterials.IRON.getDefenseForType(ArmorItem.Type.HELMET),// helmtet
                     ArmorMaterials.IRON.getDefenseForType(ArmorItem.Type.CHESTPLATE) + 1,// chestplate
